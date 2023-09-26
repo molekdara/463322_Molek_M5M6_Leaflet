@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Peta Referensi Molk</title>
+    <link
+      rel="stylesheet"
+      href="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.css"
+    />
+    <script src="http://cdn.leafletjs.com/leaflet-0.7.3/leaflet.js"></script>
+  </head>
+
+  <body>
+    <div id="peta" style="width: 100%; height: 580px"></div>
+    <script>
+      var mapOptions = {
+        center: [-6.7383615, 111.0118796],
+        zoom: 8,
+      };
+
+      var map = new L.map("peta", mapOptions);
+
+      var layer = new L.TileLayer(
+        "http://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png"
+      );
+
+      var markerOptions = {
+        title: "MyLocations",
+        clickable: true,
+      };
+
+      var marker = L.marker([-6.7383615, 111.0118796]);
+
+      marker.bindPopup("Rumah Molk").openPopup();
+      marker.addTo(map);
+
+      map.addLayer(layer);
+
+      var marker = L.marker([-7.762791, 110.375574]);
+
+marker.bindPopup("Kost Molk").openPopup();
+marker.addTo(map);
+
+map.addLayer(layer);
+
+var marker = L.marker([-7.764003, 110.372706]);
+
+marker.bindPopup("Kampus Molk").openPopup();
+marker.addTo(map);
+
+map.addLayer(layer);
+
+var marker = L.marker([-7.748602, 110.394967]);
+
+marker.bindPopup("Kontrakan Pacar Molk").openPopup();
+marker.addTo(map);
+
+map.addLayer(layer);
+
+var marker = L.marker([-7.766459, 110.367899]);
+
+marker.bindPopup("Warung Favorite Molk").openPopup();
+marker.addTo(map);
+
+map.addLayer(layer);
+
+var marker = L.marker([-7.776361, 110.374575]);
+
+marker.bindPopup("Supermaret Favorite Molk").openPopup();
+marker.addTo(map);
+
+map.addLayer(layer);
+    </script>
+  </body>
+</html>
+
+<p>
+  <a href="index.html">Kembali ke Menu Tugas</a>
